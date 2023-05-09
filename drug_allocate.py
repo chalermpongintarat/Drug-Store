@@ -1,4 +1,4 @@
-with open("/Users/chalermpong/Desktop/drug_store/drug_list.txt", "r") as file: 
+with open("drug_list.txt", "r") as file: 
     lines = file.read().split("\n")
     
     find_1 = "(" # () {} [] ' , - _
@@ -21,13 +21,13 @@ with open("/Users/chalermpong/Desktop/drug_store/drug_list.txt", "r") as file:
         else:
             without_symbol.append(line)
 
-    f = open("/Users/chalermpong/Desktop/drug_store/drug_with_symbol.txt", "w")
+    f = open("drug_with_symbol.txt", "w")
     for line in with_symbol:
         f.write(str(line))
         f.write("\n")
     f.close()
 
-    f = open("/Users/chalermpong/Desktop/drug_store/drug_without_symbol.txt", "w")
+    f = open("drug_without_symbol.txt", "w")
     for line in without_symbol:
         f.write(str(line))
         f.write("\n")
